@@ -37,13 +37,13 @@ class BotCore(Methods):
   
   def setwebhook(self, url, **kwargs):
     kwargs['url'] = url
-    self.method('setWebhook', **kwargs)
+    return self.method('setWebhook', **kwargs)
     
   def deletewebhook(self):
-    self.method('deleteWebhook')
+    return self.method('deleteWebhook')
     
   def getwebhookinfo(self):
-    self.method('getWebhookInfo')
+    return self.method('getWebhookInfo')
   
   def register(self, types, function, text, path):
     for type_ in types:
